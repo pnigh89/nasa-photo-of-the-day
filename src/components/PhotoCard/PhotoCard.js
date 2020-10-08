@@ -10,7 +10,9 @@ const PhotoCard = (props) => {
 
 return (
     <div className='photo-wrapper'>
+         <span className='comment'>{photoData.explanation}</span>
         <img alt = 'pic of the day' src={photoData.url} />
+       
         
     </div>
     

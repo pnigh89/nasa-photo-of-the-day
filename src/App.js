@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
 import { API_KEY, BASE_URL } from '../src/constant/index'
-// import Header from '../src/components/Header'
+import Header from '../src/components/Header/Header'
 import PhotoCard from '../src/components/PhotoCard/PhotoCard'
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <PhotoCard photoData={photoData} />
       {/* <img src ={photoData.url} /> */}
       
