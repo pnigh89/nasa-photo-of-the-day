@@ -31,6 +31,13 @@ function randomDate(start, end) {
  let changeDate = randomDate(new Date(1995, 6, 15), new Date())
  console.log(changeDate)
 
+ const newDate = () => {
+ 
+  if (!date ) return setDate(null)
+  setDate(`${changeDate}`)
+
+}
+console.log(newDate)
 
 // function App() {
 
@@ -52,7 +59,9 @@ function randomDate(start, end) {
 //   }, [])
 
 
-
+function refreshPage() {
+  window.location.reload(false);
+}
 
   return (
     <div className="App">
@@ -60,7 +69,8 @@ function randomDate(start, end) {
       <PhotoCard photoData={photoData} />
       <span>Photo of the day for {changeDate} </span> 
       {/* <img src ={photoData.url} /> */}
-      
+      <br />
+      <button onClick={refreshPage}>Click for New Pic!</button>
     </div>
   );
 }
