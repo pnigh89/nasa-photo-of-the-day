@@ -4,6 +4,7 @@ import axios from 'axios'
 import { API_KEY, BASE_URL } from '../src/constant/index'
 import Header from '../src/components/Header/Header'
 import PhotoCard from '../src/components/PhotoCard/PhotoCard'
+import styled from 'styled-components'
 
 function App() {
 
@@ -39,6 +40,28 @@ function randomDate(start, end) {
 }
 console.log(newDate)
 
+const StyledBody = styled.div`
+background-image: url('https://thewallpaper.co//wp-content/uploads/2017/10preview/space-landscapes-space-view-planets-spaceshipsart-outer-space-stars-high-resolution-background.jpg');
+
+p {
+  display: flex;
+  justify-content: center;
+  background-color: peachpuff;
+  width: 30%;
+  margin-left: 40%;
+  margin-right: 45%;
+} 
+
+button {
+  display: flex;
+  justify-content: center;
+  margin-left: 45%;
+  margin-bottom: 3%;
+  background-color: peachpuff;
+  
+}
+`
+
 // function App() {
 
 
@@ -64,14 +87,15 @@ function refreshPage() {
 }
 
   return (
-    <div className="App">
+    <StyledBody>
       <Header />
       <PhotoCard photoData={photoData} />
-      <span>Photo of the day for {changeDate} </span> 
+      <p>Photo of the day for {changeDate} </p> 
       {/* <img src ={photoData.url} /> */}
       <br />
       <button onClick={refreshPage}>Click for New Pic!</button>
-    </div>
+      <br />
+    </StyledBody>
   );
 }
 

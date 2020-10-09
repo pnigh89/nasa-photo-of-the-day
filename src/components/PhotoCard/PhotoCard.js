@@ -20,12 +20,15 @@ img {
 
 span {
     width:50%;
+    background-color: peachpuff;
+    border-radius: 4%;
+    padding: 2% 2%;
 }
 `
 
 
 const PhotoCard = (props) => {
-    const {photoData} = props
+    const {photoData, changeDate} = props
 
 return (
     <PhotoStyle>
@@ -33,6 +36,7 @@ return (
         <img alt = 'pic of the day' src={photoData.url} />
         <br />
         <span className='comment'>{photoData.explanation}</span>
+        
         
     </PhotoStyle>
     
